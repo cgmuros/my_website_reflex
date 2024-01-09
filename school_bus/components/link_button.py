@@ -1,13 +1,28 @@
 import reflex as rx
+import school_bus.styles.styles as styles
+from school_bus.styles.styles import Size as Size
 
-def link_button(text: str, url: str) -> rx.Component:
+
+def link_button(tittle: str, body: str, url: str, image: str) -> rx.Component:
     return rx.link(
             rx.button(
                 rx.hstack(
-                    rx.icon(
-                        tag="arrow_forward"
+                    rx.image(
+                        src=image,
+                        width=Size.LARGE.value,
+                        height=Size.LARGE.value,
+                        margin=Size.MEDIUM.value
                     ),
-                    rx.text(text),
+                    rx.vstack(
+                        rx.text(tittle, style=styles.button_title_style),
+                        rx.text(body, style=styles.button_body_style),
+                        align_items="start",
+                        spacing=Size.SMALL.value,
+                        padding_y=Size.SMALL.value,
+                        padding_right=Size.SMALL.value
+
+                    ),
+                    widht="100%"
                 )
             ),
             href=url,
