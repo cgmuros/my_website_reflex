@@ -1,8 +1,8 @@
 import reflex as rx
 import datetime
-from school_bus.styles.styles import Size as Size
-from school_bus.styles.colors import TextColor as TextColor
-import school_bus.constants as const
+from personal_website.styles.styles import Size as Size
+from personal_website.styles.colors import TextColor as TextColor
+import personal_website.constants as const
 
 
 

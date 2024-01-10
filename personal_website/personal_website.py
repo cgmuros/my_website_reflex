@@ -1,10 +1,10 @@
 import reflex as rx
-from school_bus.components.navbar import navbar
-from school_bus.views.header.header import header
-from school_bus.views.links.links import links
-from school_bus.components.footer import footer
-import school_bus.styles.styles as styles
-from school_bus.styles.styles import Size as Size
+from personal_website.components.navbar import navbar
+from personal_website.views.header.header import header
+from personal_website.views.links.links import links
+from personal_website.components.footer import footer
+import personal_website.styles.styles as styles
+from personal_website.styles.styles import Size as Size
 
 
 class State(rx.State):

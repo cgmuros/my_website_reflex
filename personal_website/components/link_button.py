@@ -1,6 +1,6 @@
 import reflex as rx
-import school_bus.styles.styles as styles
-from school_bus.styles.styles import Size as Size
+import personal_website.styles.styles as styles
+from personal_website.styles.styles import Size as Size
 
 
 def link_button(tittle: str, body: str, url: str, image: str) -> rx.Component:

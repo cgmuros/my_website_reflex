@@ -1,5 +1,5 @@
 import reflex as rx
-from school_bus.styles.styles import Size as Size
+from personal_website.styles.styles import Size as Size
 
 
 def link_icon(image: str, url: str, alt: str) -> rx.Component:

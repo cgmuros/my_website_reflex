@@ -1,5 +1,5 @@
 import reflex as rx
-import school_bus.styles.styles as styles
+import personal_website.styles.styles as styles
 
 
 def title(text: str) -> rx.Component:

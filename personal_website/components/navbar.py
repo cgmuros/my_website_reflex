@@ -1,8 +1,8 @@
 import reflex as rx
-from school_bus.styles.styles import Size as Size
-from school_bus.styles.colors import TextColor as TextColor
-from school_bus.styles.colors import Color as Color
-import school_bus.styles.styles as styles
+from personal_website.styles.styles import Size as Size
+from personal_website.styles.colors import TextColor as TextColor
+from personal_website.styles.colors import Color as Color
+import personal_website.styles.styles as styles
 
 
 

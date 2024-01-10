@@ -1,11 +1,11 @@
 import reflex as rx
-from school_bus.components.link_icon import link_icon
-from school_bus.components.info_text import info_text
-from school_bus.styles.styles import Size as Size
-from school_bus.styles.colors import TextColor as TextColor
-from school_bus.styles.colors import Color as Color
+from personal_website.components.link_icon import link_icon
+from personal_website.components.info_text import info_text
+from personal_website.styles.styles import Size as Size
+from personal_website.styles.colors import TextColor as TextColor
+from personal_website.styles.colors import Color as Color
 from datetime import datetime
-import school_bus.constants as const
+import personal_website.constants as const
 
 
 def experience():
@@ -52,9 +52,12 @@ def header() -> rx.Component:
         ),
 
         rx.text(
-            f"""I have been working on data for {experience()} years with experience 
-            on BI and Big data projects on Cloud and on Premise.
-            Here You will find my interest links""",
+            f"""I have been working for the last {experience()} years 
+            on data-related projects. Various Companies and Projects 
+            have allowed me to gain experience and meet great teams 
+            in which I have been able to be a contribution. I built 
+            this site mainly so that you can get to know me and contact 
+            me if you need it.""",
             color=TextColor.BODY.value
             ),
         spacing=Size.BIG.value,

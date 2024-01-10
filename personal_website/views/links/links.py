@@ -1,8 +1,8 @@
 import reflex as rx
-from school_bus.components.link_button import link_button
-from school_bus.components.title import title
-from school_bus.styles.styles import Size as Size
-import school_bus.constants as constants
+from personal_website.components.link_button import link_button
+from personal_website.components.title import title
+from personal_website.styles.styles import Size as Size
+import personal_website.constants as constants
 
 
 
