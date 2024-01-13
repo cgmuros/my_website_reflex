@@ -9,9 +9,11 @@ import personal_website.styles.styles as styles
 def navbar() -> rx.Component:
     return rx.hstack(
         rx.box(
-            rx.span("cgmuros", color=Color.PRIMARY.value),
-            rx.span("dev", color=Color.SECONDARY.value),
-            style=styles.navbar_title_style
+            rx.hstack(
+                rx.link("cmuros", color=Color.PRIMARY.value, href="/"),
+                rx.link("dev", color=Color.SECONDARY.value, href="/"),
+                style=styles.navbar_title_style,
+            )  
         ),
         position="sticky",
         bg=Color.CONTENT.value,

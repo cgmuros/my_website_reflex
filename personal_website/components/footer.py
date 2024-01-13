@@ -10,7 +10,7 @@ import personal_website.constants as const
 def footer() -> rx.Component:
     return rx.vstack(
         rx.image(
-            src="logo.png",
+            src="/logo_128.png",
             height=Size.VERY_BIG.value
             ),
         rx.link(

@@ -3,7 +3,7 @@ import personal_website.styles.styles as styles
 from personal_website.styles.styles import Size as Size
 
 
-def link_button(tittle: str, body: str, url: str, image: str) -> rx.Component:
+def link_button(tittle: str, body: str, url: str, image: str, is_external: bool = True) -> rx.Component:
     return rx.link(
             rx.button(
                 rx.hstack(
@@ -26,7 +26,7 @@ def link_button(tittle: str, body: str, url: str, image: str) -> rx.Component:
                 )
             ),
             href=url,
-            is_external=True,
+            is_external=is_external,
             width="100%"
         )
     

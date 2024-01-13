@@ -4,38 +4,37 @@ from personal_website.components.info_text import info_text
 from personal_website.styles.styles import Size as Size
 from personal_website.styles.colors import TextColor as TextColor
 from personal_website.styles.colors import Color as Color
-from datetime import datetime
+from personal_website.components.message import message
 import personal_website.constants as const
+import personal_website.common.common as common
 
 
-def experience():
-    # Obtén la fecha actual
-    fecha_actual = datetime.now()
-    fecha_referencia = datetime(2009, 1, 1)
-    diferencia_anos = fecha_actual.year - fecha_referencia.year
-    resultado_string = str(diferencia_anos)
-    return resultado_string
 
-def header() -> rx.Component:
+
+def header(type: str = "", title: str = "") -> rx.Component:
     return rx.vstack(
         rx.hstack(
-            rx.avatar(
+            rx.link(
+                rx.avatar(
                 name="Cristian Munoz", 
                 size="xl",
-                src="me.png",
+                src="/me.png",
                 padding="2px",
                 color=TextColor.BODY.value,
                 border="4px",
                 border_color=Color.PRIMARY.value,
                 bg=Color.CONTENT.value),
+            href="/",
+            ),
+            
             rx.vstack(
                 rx.heading("Cristian Munoz", size="lg"),
                 rx.text("@cgmuros", margin_top=Size.ZERO.value, color=TextColor.BODY.value),
                 rx.hstack(
-                    link_icon("icons/linkedin.svg", const.MY_LINKEDIN, "Linkedin"),
-                    link_icon("icons/square-github.svg", const.MY_GITHUB, "Github"),
-                    link_icon("icons/twitter_logo.svg", const.MY_TWITTER, "Twitter/X"),
-                    link_icon("icons/strava_logo.svg", "https://www.strava.com/athletes/49921501", "Strava")
+                    link_icon("/icons/linkedin.svg", const.MY_LINKEDIN, "Linkedin"),
+                    link_icon("/icons/square-github.svg", const.MY_GITHUB, "Github"),
+                    link_icon("/icons/twitter_logo.svg", const.MY_TWITTER, "Twitter/X"),
+                    link_icon("/icons/strava_logo.svg", const.MY_STRAVA, "Strava")
                 ),
                 align_items="start"
             ),
@@ -50,17 +49,8 @@ def header() -> rx.Component:
             info_text("+6", "Data Architect"),
             width="100%"
         ),
-
-        rx.text(
-            f"""I have been working for the last {experience()} years 
-            on data-related projects. Various Companies and Projects 
-            have allowed me to gain experience and meet great teams 
-            in which I have been able to be a contribution. I built 
-            this site mainly so that you can get to know me and contact 
-            me if you need it.""",
-            color=TextColor.BODY.value
-            ),
+        rx.text(title, color=TextColor.HEADER.value, font_size=Size.LARGE.value),
+        message(type=type),
         spacing=Size.BIG.value,
         align_items="start"
-        
     )

@@ -5,10 +5,30 @@ from personal_website.styles.styles import Size as Size
 import personal_website.constants as constants
 
 
-
 def links() -> rx.Component:
     return rx.vstack(
         title("Links"),
+        link_button(
+            "About Me", 
+            "A little more about me", 
+            constants.LOCAL_ABOUT_ME,
+            "icons/aboutme.svg",
+            False
+            ),
+        link_button(
+            "My Skills", 
+            "Knowing my technical skills", 
+            constants.LOCAL_SKILLS,
+            "icons/skills.svg",
+            False
+            ),
+        link_button(
+            "My CV", 
+            "Download my CV", 
+            "docs/cv_english_detail.pdf",
+            "icons/cv.svg",
+            False
+            ),
         link_button(
             "LikedIn", 
             "Let's talk on linkedin", 
@@ -26,6 +46,12 @@ def links() -> rx.Component:
             "Let's connect", 
             constants.MY_TWITTER,
             "icons/twitter_logo.svg"
+            ),
+        link_button(
+            "Strava", 
+            "Let's connect", 
+            constants.MY_STRAVA,
+            "icons/strava_logo.svg"
             ),
         
         title("Contact"),
