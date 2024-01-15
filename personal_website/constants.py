@@ -9,3 +9,4 @@ MY_EMAIL = "cgmuros@gmail.com"
 # local pages
 LOCAL_ABOUT_ME = "about"
 LOCAL_SKILLS = "skills"
+LOCAL_MYCV = "mycv"

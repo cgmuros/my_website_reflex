@@ -15,23 +15,23 @@ MY_OVERVIEW_ABOUT: str = f"""My name is Cristian Munoz, a Computer Engineer by p
             I invite you to connect and talk. It is always good to generate instances of conversation with others.
             I invite you to review the experience in various technologies and if you have any interesting ideas, do not hesitate to contact me."""
 
+MY_CV: str = f"""Here all the details of my professional experience."""
+
 
 def message(type: str = "") -> rx.Component:
     text = MY_OVERRVIEW
     if type == "about":
         text = MY_OVERVIEW_ABOUT
+    elif type == "cv":
+        text = MY_CV
     elif type == "skills":
         text = MY_SKILLS
 
     paragraphs = text.split('\n')
     text_components = [rx.text(paragraph, color=TextColor.BODY.value, align="left") for paragraph in paragraphs if paragraph.strip()]
 
-    # return rx.text(
-    #         text,
-    #         color=TextColor.BODY.value
-    #         )
-
     return rx.vstack(
         *text_components,
-        align_items="start"
+        align_items="start",
+        widht="100%"
         )

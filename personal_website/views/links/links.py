@@ -25,7 +25,7 @@ def links() -> rx.Component:
         link_button(
             "My CV", 
             "Download my CV", 
-            "docs/cv_english_detail.pdf",
+            constants.LOCAL_MYCV,
             "icons/cv.svg",
             False
             ),
