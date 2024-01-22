@@ -20,11 +20,11 @@ def index() -> rx.Component:
                 links(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",
-                margin_y=Size.BIG.value,
                 padding=Size.BIG.value
             )
         ),
-        footer()
+        footer(),
+        background_color=Color.BACKGROUND.value
     )
 
 
@@ -37,11 +37,11 @@ def about():
                 header(type="about", title="About Me"),
                 max_width=styles.MAX_WIDTH,
                 width="100%",
-                margin_y=Size.BIG.value,
                 padding=Size.BIG.value
             )
         ),
-        footer()
+        footer(),
+        background_color=Color.BACKGROUND.value
     )
 
 @rx.page()
@@ -54,11 +54,11 @@ def skills():
 
                 max_width=styles.MAX_WIDTH,
                 width="100%",
-                margin_y=Size.BIG.value,
                 padding=Size.BIG.value
             )
         ),
-        footer()
+        footer(),
+        background_color=Color.BACKGROUND.value
     )
 
 @rx.page()
@@ -80,18 +80,29 @@ def mycv():
                 ),
                 max_width=styles.MAX_WIDTH,
                 width="100%",
-                margin_y=Size.BIG.value,
                 padding=Size.BIG.value,
                 
             )
         ),
-        footer()
+        footer(),
+        background_color=Color.BACKGROUND.value
     )
 
 
 app = rx.App(
     stylesheets=styles.STYLESCHEETS,
-    style=styles.BASE_STYLE
+    style=styles.BASE_STYLE,
+    head_components=[
+        rx.script(src="https://www.googletagmanager.com/gtag/js?id=G-HTB3V4RS0N"),
+        rx.script(
+            """
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', "G-HTB3V4RS0N");
+"""
+        )
+    ]
 )
 app.add_page(
     index,
@@ -100,5 +111,3 @@ app.add_page(
 app.add_page(about, title="About")
 app.add_page(skills, title="My Skills")
 app.add_page(mycv, title="My CV")
-
-app.compile()

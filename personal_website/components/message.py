@@ -3,7 +3,7 @@ from personal_website.styles.colors import TextColor as TextColor
 import personal_website.common.common as common
 
 
-MY_SKILLS: str = """Here is a list of the technologies with which I have worked on various projects"""
+MY_SKILLS: str = f"""Here is a list of the technologies with which I have worked on various projects"""
 
 MY_OVERRVIEW: str = f"""I have been working for the last {common.experience()} years on data-related projects. 
             Various Companies and Projects have allowed me to gain experience and meet great teams in which I have been able to be a contribution. 
