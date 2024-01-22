@@ -1,8 +1,8 @@
 import reflex as rx
 from personal_website.components.navbar import navbar
 from personal_website.styles.colors import Color
-from personal_website.views.header.header import header
-from personal_website.views.links.links import links
+from personal_website.views.header import header
+from personal_website.views.links import links
 from personal_website.components.footer import footer
 import personal_website.styles.styles as styles
 from personal_website.styles.styles import Size as Size
