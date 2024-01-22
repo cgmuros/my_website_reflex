@@ -19,9 +19,9 @@ def navbar() -> rx.Component:
         ),
     
         rx.hstack(
-            rx.image(src="icons/download.svg"),
+            rx.image(src="/icons/download.svg"),
             rx.link(
-                "Download CV", href="docs/cv_english_detail.pdf", color=Color.PRIMARY.value, is_external=True
+                "Download CV", href="/docs/cv_english_detail.pdf", color=Color.PRIMARY.value, is_external=True
             ),
         ),
         

@@ -11,4 +11,6 @@ class TextColor(Enum):
     HEADER = "#F1F2F4"
     BODY = "#C3C7CB"
     FOOTER = "#A3ABB2"
+    LIST_HEADER = "#F1F2F4"
+    ROW_LIST = "#C3C7CB"
 

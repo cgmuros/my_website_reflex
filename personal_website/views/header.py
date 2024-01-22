@@ -19,7 +19,7 @@ def header(type: str = "", title: str = "") -> rx.Component:
                 rx.avatar(
                     name="Cristian Munoz", 
                     size="xl",
-                    src="/me.png",
+                    src="/me_128.png",
                     padding="2px",
                     color=TextColor.BODY.value,
                     border="4px",
