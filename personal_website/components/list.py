@@ -14,7 +14,8 @@ def list() -> rx.Component:
             width="100%", 
             color=TextColor.LIST_HEADER.value, 
             justify_content="center", 
-            flex_wrap="wrap"),
+            flex_wrap="wrap",
+            padding=Size.BIG.value),
         border="1px solid #ccc",
         padding=Size.BIG.value
 
