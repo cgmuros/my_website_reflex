@@ -40,5 +40,4 @@ def mycv():
             )
         ),
         footer(),
-        background_color=Color.BACKGROUND.value
     )

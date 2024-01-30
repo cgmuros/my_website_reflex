@@ -30,7 +30,6 @@ def index() -> rx.Component:
             )
         ),
         footer(),
-        background_color=Color.BACKGROUND.value
     )
 
 

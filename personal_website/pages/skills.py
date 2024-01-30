@@ -30,5 +30,4 @@ def skills():
             )
         ),
         footer(),
-        background_color=Color.BACKGROUND.value
     )

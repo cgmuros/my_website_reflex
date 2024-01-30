@@ -4,6 +4,7 @@ from personal_website.styles.colors import TextColor as TextColor
 from personal_website.styles.colors import Color as Color
 import personal_website.styles.styles as styles
 from personal_website.components.ant_components import float_button
+import personal_website.constants as cons
 
 
 
@@ -25,7 +26,10 @@ def navbar() -> rx.Component:
                 "Download CV", href="/docs/cv_english_detail.pdf", color=Color.PRIMARY.value, is_external=True
             ),
         ),
-        float_button(),
+        float_button(
+            icon=rx.Image(src="/icons/linkedin_blue.svg"),
+            href=cons.MY_LINKEDIN,
+        ),
         justify_content="space-between",
         position="sticky",
         bg=Color.CONTENT.value,
