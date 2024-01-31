@@ -1,0 +1,35 @@
+name: Stats
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  build:
+    if: github.repository == 'cgmuros/my_website_reflex'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run build script
+        run: python ./remot_build.sh
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update static build
+          commit_user_name: Cristian Munoz [Github Actions]
+          commit_user_email: cgmuros@gmail.com
+          commit_author: cgmuros <cgmuros@gmail.com>
