@@ -23,12 +23,15 @@ def navbar() -> rx.Component:
         rx.hstack(
             rx.image(src="/icons/download.svg"),
             rx.link(
-                "Download CV", href="/docs/cv_english_detail.pdf", color=Color.PRIMARY.value, is_external=True
+                "Download CV", 
+                href="/docs/cv_english_detail.pdf", 
+                color=Color.PRIMARY.value, 
+                is_external=True
             ),
         ),
         float_button(
-            icon=rx.Image(src="/icons/linkedin_blue.svg"),
-            href=cons.MY_LINKEDIN,
+            icon=rx.Image(src="/icons/whatsapp.svg"),
+            href=cons.MY_WHATSAPP,
         ),
         justify_content="space-between",
         position="sticky",

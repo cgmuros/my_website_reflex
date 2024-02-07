@@ -12,11 +12,20 @@ import personal_website.common.common as common
 
 
 
-def header(type: str = "", title: str = "") -> rx.Component:
-    return rx.vstack(
+def header(type: str = "", title: str = "", live=False) -> rx.Component:
+    return rx.vstack( 
         rx.hstack(
             rx.link(
                 rx.avatar(
+                    rx.cond(
+                        live,
+                        rx.avatar_badge(
+                            box_size=Size.MEDIUM.value,
+                            bg=Color.GREEN.value,
+                            border_color=Color.GREEN.value,
+                            # margin="5px"
+                        )
+                    ),
                     name="Cristian Munoz", 
                     size="xl",
                     src="/me_128.png",
@@ -24,8 +33,9 @@ def header(type: str = "", title: str = "") -> rx.Component:
                     color=TextColor.BODY.value,
                     border="4px",
                     border_color=Color.PRIMARY.value,
-                    bg=Color.CONTENT.value),
-            href="/",
+                    bg=Color.CONTENT.value
+                    ),
+                href="/",
             ),
             
             rx.vstack(
