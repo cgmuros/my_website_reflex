@@ -5,6 +5,6 @@ config = rx.Config(
     cors_allowed_origins=[
         "http://localhost:3000",
         "https://cmuros.reflex.run",
-        "https://my-website-reflex.vercel.app/",
+        "https://my-website-reflex.vercel.app",
     ],
 )
