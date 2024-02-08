@@ -6,6 +6,5 @@ config = rx.Config(
         "http://localhost:3000",
         "https://cmuros.reflex.run",
         "https://my-website-reflex.vercel.app",
-        "https://mywebsitereflex-production.up.railway.app"
     ],
 )
