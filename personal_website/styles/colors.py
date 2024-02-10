@@ -8,6 +8,9 @@ class Color(Enum):
     CONTENT = "#171F26"
     PURPLE = "#6441A4"
     GREEN = "#00A99D"
+    RED = "#E74C3C"
+    GREEN_ONLINE = "#2ECC71"
+    RED_OFFLINE = "#E74C3C"
 
 class TextColor(Enum):
     HEADER = "#F1F2F4"

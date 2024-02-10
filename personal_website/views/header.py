@@ -20,11 +20,17 @@ def header(type: str = "", title: str = "", live=False) -> rx.Component:
                     rx.cond(
                         live,
                         rx.avatar_badge(
+                            rx.image(src="/icons/power.svg"),
                             box_size=Size.MEDIUM.value,
                             bg=Color.GREEN.value,
                             border_color=Color.GREEN.value,
-                            # margin="5px"
-                        )
+                        ),
+                        rx.avatar_badge(
+                            rx.image(src="/icons/power.svg"),
+                            box_size=Size.MEDIUM.value,
+                            bg=Color.RED_OFFLINE.value,
+                            border_color=Color.RED_OFFLINE.value,
+                        ),
                     ),
                     name="Cristian Munoz", 
                     size="xl",
@@ -45,11 +51,12 @@ def header(type: str = "", title: str = "", live=False) -> rx.Component:
                     link_icon("/icons/linkedin.svg", const.MY_LINKEDIN, "Linkedin"),
                     link_icon("/icons/square-github.svg", const.MY_GITHUB, "Github"),
                     link_icon("/icons/twitter_logo.svg", const.MY_TWITTER, "Twitter/X"),
-                    link_icon("/icons/strava_logo.svg", const.MY_STRAVA, "Strava")
+                    link_icon("/icons/strava_logo.svg", const.MY_STRAVA, "Strava"),
+                    spacing=Size.LARGE.value
                 ),
                 align_items="start"
             ),
-            spacing=Size.DEFAULT.value
+            spacing=Size.BIG.value
         ),
 
         rx.flex(
