@@ -24,7 +24,7 @@ def navbar() -> rx.Component:
             rx.image(src="/icons/download.svg"),
             rx.link(
                 "Download CV", 
-                href="/docs/cv_english_detail.pdf", 
+                href="/docs/cv_english.pdf", 
                 color=Color.PRIMARY.value, 
                 is_external=True
             ),

@@ -31,7 +31,7 @@ def mycv():
                 
                 rx.box(
                     element="iframe",
-                    src="/docs/cv_english_detail.pdf",
+                    src="/docs/cv_english.pdf",
                     width="100%",
                     max_width=styles.MAX_WIDTH,
                     border_radius="lg",
