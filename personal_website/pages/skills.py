@@ -9,7 +9,7 @@ from personal_website.styles.styles import Size as Size
 import personal_website.utils as utils
 from personal_website.routes import Route
 from personal_website.components.list import list
-from personal_website.state.PageState import PageState
+# from personal_website.state.PageState import PageState
 
 
 @rx.page(
@@ -18,7 +18,8 @@ from personal_website.state.PageState import PageState
         description=utils.index_description,
         image=utils.preview,
         meta=utils.meta,
-        on_load=PageState.check_live)
+        # on_load=PageState.check_live)
+)
 def skills():
     return rx.box(
         navbar(),
@@ -27,7 +28,8 @@ def skills():
                 header(
                     type="skills", 
                     title="My Skills",
-                    live=PageState.is_live),   
+                    # live=PageState.is_live), 
+                    live=True),  
                 list(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",
