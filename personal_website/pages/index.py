@@ -7,7 +7,7 @@ from personal_website.views.header import header
 from personal_website.views.index_links import index_links
 from personal_website.components.footer import footer
 from personal_website.styles.styles import Size as Size
-from personal_website.state.PageState import PageState
+# from personal_website.state.PageState import PageState
 
 
 @rx.page(
@@ -15,7 +15,7 @@ from personal_website.state.PageState import PageState
     description=utils.index_description,
     image=utils.preview,
     meta=utils.meta,
-    on_load=PageState.check_live
+    # on_load=PageState.check_live
 )
 def index() -> rx.Component:
     return rx.box(
@@ -24,7 +24,8 @@ def index() -> rx.Component:
         rx.center(
             rx.vstack(
                 header(
-                    live=PageState.is_live
+                    # live=PageState.is_live
+                    live=True
                 ),
                 index_links(),
                 max_width=styles.MAX_WIDTH,
